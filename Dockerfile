@@ -1,6 +1,6 @@
 FROM openjdk:17-bullseye
 
-LABEL softartdev <artik222012@gmail.com>
+LABEL rafaelweiss <marques.weiss@gmail.com>
 
 ENV ANDROID_SDK_URL https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
 ENV ANDROID_API_LEVEL android-33
@@ -24,7 +24,7 @@ sdkmanager --sdk_root=$ANDROID_HOME "build-tools;${ANDROID_BUILD_TOOLS_VERSION}"
     "extras;google;m2repository" && \
 # Install Fastlane
 apt-get update && \
-apt-get install --no-install-recommends -y --allow-unauthenticated build-essential git ruby-full && \
+apt-get install --no-install-recommends -y --allow-unauthenticated build-essential git ruby-full npm jq && \
 gem install rake && \
 gem install fastlane && \
 gem install bundler && \
