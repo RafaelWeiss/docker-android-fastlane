@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: softartdev/android-fastlane
+          images: rafaelweiss/android-fastlane
           tags: type=ref,event=tag
 
       - name: Build and push Docker image
